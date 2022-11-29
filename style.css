@@ -94,6 +94,10 @@ video {
     vertical-align: baseline;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -263,14 +267,15 @@ img {
 }
 
 .bg-banner {
-    background: url(assets/media/hero-bg.jpg);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+        url(assets/media/hero-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
 }
 
 .opacity {
-    background-color: rgb(119, 119, 120, 0.8);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
 }
 
 .hero-content {
@@ -491,4 +496,26 @@ img {
     text-transform: inherit;
     font-weight: 100;
     margin: 0.6rem 0rem;
+}
+
+/* Slider Section  */
+
+.image-slider {
+    margin: 2rem 0rem;
+}
+
+.image-slider .flex {}
+
+.image-list img {
+    width: 12%;
+    margin-left: 2.5rem;
+    filter: grayscale(100);
+}
+
+.slider-dots {
+    text-align: center;
+}
+
+.slider-dots input:hover {
+    background-color: var(--active);
 }
