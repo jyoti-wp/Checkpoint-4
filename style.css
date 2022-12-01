@@ -231,12 +231,16 @@ img {
     --active: #EA5434;
     --slide: #584B48;
     --para: #A5A4A4;
+    --heading: #635551;
     --about-bg: #FEF9F7;
 }
 
 .header {
     padding: 1rem 0rem;
-    /* position: fixed; */
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
 }
 
 .logo a {
@@ -395,14 +399,16 @@ img {
     margin-bottom: 1.5rem;
 }
 
-.card-list h2 {
+.card-list h2,
+.service-col h2 {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.3;
     text-transform: capitalize;
 }
 
-.card-list p {
+.card-list p,
+.service-col p {
     color: var(--para);
     font-size: 0.8rem;
     font-weight: 100;
@@ -422,11 +428,15 @@ img {
 
 /* About section  */
 
-.about-section {
+.about-section,
+.plan-section,
+.team,
+.pricing {
     padding: 2rem 0rem;
 }
 
-.about-bg {
+.about-bg,
+.team-bg {
     background-color: var(--about-bg);
 }
 
@@ -460,6 +470,7 @@ img {
     color: #272727;
     line-height: 1.3;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .about-para {
@@ -480,6 +491,11 @@ img {
     border: 1px solid var(--active);
     padding: 1rem;
     border-radius: 50%;
+}
+
+.about-tag a:hover {
+    background-color: var(--active);
+    color: #fff;
 }
 
 .about-desc h3 {
@@ -504,7 +520,6 @@ img {
     margin: 2rem 0rem;
 }
 
-.image-slider .flex {}
 
 .image-list img {
     width: 12%;
@@ -512,10 +527,319 @@ img {
     filter: grayscale(100);
 }
 
+.image-list img:hover {
+    filter: grayscale(0);
+}
+
 .slider-dots {
     text-align: center;
+    margin-top: 2rem;
+}
+
+.slider-dots input {
+    height: 0.6rem;
+    width: 0.6rem;
 }
 
 .slider-dots input:hover {
     background-color: var(--active);
+}
+
+/* Service Section  */
+
+.service-section,
+.service-card {
+    padding: 2rem 0rem;
+}
+
+.service-bg {
+    background: var(--about-bg);
+}
+
+.service-head {
+    font-size: 1.5rem;
+    color: var(--heading);
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.service-para {
+    color: var(--para);
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 1.3;
+    margin: 1rem 0rem;
+    text-align: center;
+    text-transform: inherit;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.service-col {
+    position: relative;
+    width: 32.33%;
+    background-color: #fff;
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+    box-shadow: 1px 1px 3px 3px #f2edeb;
+    margin-bottom: 3rem;
+}
+
+.service-col a {
+    position: absolute;
+    top: -2rem;
+    right: 44%;
+    align-items: center;
+    background-color: var(--active);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+/* Plan Section  */
+.card-one-bg {
+    background: url(assets/media/values-1.jpg) no-repeat;
+    object-fit: cover;
+    background-position: center;
+}
+
+.card-two-bg {
+    background: url(assets/media/values-2.jpg) no-repeat;
+    object-fit: cover;
+    background-position: center;
+}
+
+.card-three-bg {
+    background: url(assets/media/values-3.jpg) no-repeat;
+    object-fit: cover;
+    background-position: center;
+}
+
+.card-four-bg {
+    background: url(assets/media/values-4.jpg) no-repeat;
+    object-fit: cover;
+    background-position: center;
+}
+
+
+.plan-card {
+    width: 48%;
+    padding: 6rem 1rem 1rem 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.plan-content {
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 1rem;
+}
+
+.plan-content:hover {
+    background-color: var(--active);
+    color: #fff;
+}
+
+.plan-content h3 {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.plan-content p {
+    color: var(--font-color);
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 1.3;
+    margin-top: 1rem;
+}
+
+.plan-content a {
+    color: var(--font-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: 1rem;
+}
+
+/* Slider Section  */
+
+.image-carousel {
+    margin: 2rem 0rem;
+    position: relative;
+    /* overflow: hidden; */
+    width: 100%;
+}
+
+/* .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    float: left;
+} */
+
+/* .slider-carousel {
+    width: 20%;
+    height: 100%;
+    float: left;
+} */
+
+.bg-slider {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+        url(assets/media/testimonials-bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.carousel-details {
+    width: 100%;
+    height: 100vh;
+    animation: animate 10s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0% {
+        left: 0;
+    }
+
+    25% {
+        left: 0;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    75% {
+        left: 0;
+    }
+}
+
+.carousel-details {
+    text-align: center;
+    padding: 8rem 0rem 2rem 0rem;
+}
+
+.carousel-details img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.carousel-details h4 {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    font-weight: 600;
+}
+
+.carousel-details h5 {
+    color: #fff;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    line-height: 1.7;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+/* Portfolio section  */
+
+.portfolio-section {
+    margin: 2rem 0rem;
+}
+
+/* .bg-portfolio {
+    background-color: var(--about-bg);
+} */
+
+.portfolio-content h3,
+.team-content h3,
+.pricing-content h3 {
+    font-size: 1.5rem;
+    color: var(--heading);
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.portfolio-content p,
+.team-content p,
+.pricing-content p {
+    color: var(--heading);
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 1.3;
+    margin: 1rem 0rem;
+    text-align: center;
+    text-transform: inherit;
+}
+
+.portfolio-list {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio-list span {
+    margin: 0rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+.portfolio-list span:hover {
+    padding: 0.5rem 1rem;
+    color: var(--active);
+    background-color: #FCF1EC;
+    border-radius: 0.8rem;
+}
+
+.portfolio-image {
+    margin: 2rem 0rem;
+}
+
+.portfolio-image img {
+    width: 32.33%;
+    margin-bottom: 0.8rem;
+}
+
+/* Team Section  */
+
+.team-card {
+    margin: 1rem 0rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    width: 24%;
+    box-shadow: 1px 1px 3px 3px #f2edeb;
+}
+
+.team-card-content {
+    padding: 1rem;
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.team-card h4 {
+    font-weight: 100;
+    line-height: 1.7;
+    text-transform: capitalize;
+}
+
+.team-card span {
+    color: var(--para);
+    font-size: 0.8rem;
+    line-height: 1.3;
+    text-transform: capitalize
 }
