@@ -434,14 +434,16 @@ img {
 .team,
 .pricing,
 .faq-section,
-.contact-section {
+.contact-section,
+.footer {
     padding: 2rem 0rem;
 }
 
 .about-bg,
 .team-bg,
 .faq-bg,
-.faq-bg {
+.faq-bg,
+.footer-bg {
     background-color: var(--about-bg);
 }
 
@@ -1029,7 +1031,7 @@ img {
 .contact-form {
     padding: 1.5rem;
     grid-area: form;
-    box-shadow: 5px 5px 15px 8px #f2edeb;
+    box-shadow: 5px 5px 15px 8px #f4f5f5;
 }
 
 .row-box50 {
@@ -1074,4 +1076,66 @@ img {
     color: #fff;
     font-weight: 400;
     font-size: 0.8rem;
+}
+
+/* Footer main  */
+
+.footer .flex {
+    align-items: flex-start;
+}
+
+.footer-logo h3,
+.footer-col {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.7;
+}
+
+.footer-logo address,
+.footer-email,
+.footer-nav a,
+.footer-col p {
+    color: var(--heading);
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 1.5;
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.footer-nav i {
+    color: var(--active);
+    margin-right: 0.4rem;
+}
+
+.footer-email {
+    margin-top: 1rem;
+}
+
+.footer-col {
+    width: 24.5%;
+    font-size: 1rem;
+    color: var(--heading);
+    line-height: 1.7;
+    font-weight: 600;
+    text-align: start;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+}
+
+.footer-subscribe {
+    position: relative;
+}
+
+.btn-sub {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--active);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    text-align: center;
 }
